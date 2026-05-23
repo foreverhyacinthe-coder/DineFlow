@@ -1,13 +1,15 @@
 import DineflowAuth from "./dineflow-auth";
-import { Routes, Route } from "react-router-dom";
+import DineFlowDashboard from "./dashboard";
+import { Route, Routes } from "react-router-dom";
+
 const App = () => {
   return (
-    <>
-      <Routes>
-        
-        <Route path="/dineflow-auth" element={<DineflowAuth />} />
-      </Routes>
-    </>
+    <Routes>
+      <Route path="/" element={<DineflowAuth />} />
+      <Route path="/dineflow-auth" element={<DineflowAuth />} />
+      <Route path="/dashboard" element={<DineFlowDashboard />} />
+      <Route path="*" element={<DineflowAuth />} />
+    </Routes>
   );
 };
 
