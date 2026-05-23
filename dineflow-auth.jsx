@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const BURGER_BG =
   "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=900&q=80";
@@ -6,7 +7,6 @@ const CHICKEN_BG =
   "https://images.unsplash.com/photo-1598103442097-8b74394b95c3?w=900&q=80";
 
 const styles = `
-  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap');
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -526,6 +526,7 @@ function CreateAccountPage({ onSwitch }) {
 // ── SIGN IN PAGE ──
 function SignInPage({ onSwitch }) {
   const [showPass, setShowPass] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <div className="auth-root">
@@ -582,9 +583,12 @@ function SignInPage({ onSwitch }) {
           <label htmlFor="remember">Remember this device for 30 days</label>
         </div>
 
-        <button className="btn-primary">
-          Sign In to Dashboard <ArrowIcon />
-        </button>
+        <button
+  className="btn-primary"
+  onClick={() => navigate("/dashboard")}
+>
+  Sign In to Dashboard <ArrowIcon />
+</button>
 
         <div className="divider">or continue with</div>
 
