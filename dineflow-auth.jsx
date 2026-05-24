@@ -395,7 +395,6 @@ const ZapIcon = () => (
 function CreateAccountPage({ onSwitch }) {
   const [showPass, setShowPass] = useState(false);
   const [showConfirm, setShowConfirm] = useState(false);
- 
 
   return (
     <div className="auth-root">
@@ -528,30 +527,30 @@ function CreateAccountPage({ onSwitch }) {
 function SignInPage({ onSwitch }) {
   const [showPass, setShowPass] = useState(false);
   const navigate = useNavigate();
-  const [formData ,setFormData]=useState({email:"",password:""})
-  const [message, setMessage] = useState("")
-  const [showMessage, setShowMessage] = useState(false)
-  const handleLogin = ()=>{
-    if(!formData.email || !formData.password){
-      setMessage("You have to enter your email and password")
-      setShowMessage(true)
-      return
+  const [formData, setFormData] = useState({ email: "", password: "" });
+  const [message, setMessage] = useState("");
+  const [showMessage, setShowMessage] = useState(false);
+  const handleLogin = () => {
+    if (!formData.email || !formData.password) {
+      setMessage("You have to enter your email and password");
+      setShowMessage(true);
+      return;
     }
 
-    if(formData.email !="foreverhyacinthe@gmail.com"){
-      setMessage("You have entered wrong email")
-      setShowMessage(true)
-      return
+    if (formData.email != "foreverhyacinthe@gmail.com") {
+      setMessage("You have entered wrong email");
+      setShowMessage(true);
+      return;
     }
 
-    if(formData.password != "forever@123"){
-      setMessage("You have entered wrong password")
-      setShowMessage(true)
-      return
+    if (formData.password != "forever@123") {
+      setMessage("You have entered wrong password");
+      setShowMessage(true);
+      return;
     }
 
-    navigate("/dashboard")
-  }
+    navigate("/dashboard");
+  };
 
   return (
     <div className="auth-root">
@@ -572,10 +571,13 @@ function SignInPage({ onSwitch }) {
         <div className="field">
           <label>Email Address</label>
           <div className="field-icon-wrap">
-            <input type="email"
-             placeholder="chef@dineflow.com"
-             onChange={(e)=>setFormData({...formData,email:e.target.value})}
-             />
+            <input
+              type="email"
+              placeholder="chef@dineflow.com"
+              onChange={(e) =>
+                setFormData({ ...formData, email: e.target.value })
+              }
+            />
             <span className="icon">
               <AtIcon />
             </span>
@@ -597,10 +599,11 @@ function SignInPage({ onSwitch }) {
           </div>
           <div className="field-icon-wrap" style={{ marginTop: 6 }}>
             <input
-
               type={showPass ? "text" : "password"}
               placeholder="••••••••"
-              onChange={(e)=>setFormData({...formData, password:e.target.value})}
+              onChange={(e) =>
+                setFormData({ ...formData, password: e.target.value })
+              }
             />
             <span className="icon" onClick={() => setShowPass((p) => !p)}>
               <EyeIcon />
@@ -613,17 +616,10 @@ function SignInPage({ onSwitch }) {
           <label htmlFor="remember">Remember this device for 30 days</label>
         </div>
 
-        <button
-  className="btn-primary"
-  onClick={handleLogin}
->
-  Sign In to Dashboard <ArrowIcon />
-</button>
- {
-            showMessage&&(
-              <p style={{color:"red"}}>{message}</p>
-            )
-            }
+        <button className="btn-primary" onClick={handleLogin}>
+          Sign In to Dashboard <ArrowIcon />
+        </button>
+        {showMessage && <p style={{ color: "red" }}>{message}</p>}
 
         <div className="divider">or continue with</div>
 
@@ -635,7 +631,7 @@ function SignInPage({ onSwitch }) {
             <AppleIcon /> Apple
           </button>
         </div>
-         
+
         <p className="alt-link" style={{ marginBottom: 24 }}>
           Don't have an account?{" "}
           <button
@@ -645,13 +641,11 @@ function SignInPage({ onSwitch }) {
           >
             Signup
           </button>
-         
         </p>
 
         <div className="footer-links">
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Service</a>
-         
         </div>
       </div>
 
@@ -663,7 +657,6 @@ function SignInPage({ onSwitch }) {
           <div className="brand-card">
             <div className="brand-name">DINEFLOW</div>
             <div className="brand-tagline">Manage. Serve. Grow.</div>
-            
           </div>
         </div>
       </div>
