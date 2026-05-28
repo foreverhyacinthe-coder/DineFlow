@@ -366,17 +366,3 @@ export function SignInPage() {
     </div>
   );
 }
-
-// ─────────────────────────────────────────────
-// Router setup — wrap in BrowserRouter in main.jsx:
-//
-//   import { BrowserRouter, Routes, Route } from "react-router-dom";
-//   import { SignInPage, CreateAccountPage } from "./auth";
-//
-//   <BrowserRouter>
-//     <Routes>
-//       <Route path="/login"    element={<SignInPage />} />
-//       <Route path="/register" element={<CreateAccountPage />} />
-//     </Routes>
-//   </BrowserRouter>
-// ─────────────────────────────────────────────
