@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+
+/* ── Base reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* ── Fluid spacing — Tailwind can't do clamp() ── */
+.left-panel {
+  padding: clamp(20px, 4vh, 48px) clamp(24px, 4vw, 52px);
+}
+
+.form-heading   { font-size: clamp(20px, 2.4vh, 28px); }
+.form-subheading { font-size: clamp(12px, 1.4vh, 14px); margin-bottom: clamp(14px, 2vh, 28px); }
+
+.field          { margin-bottom: clamp(10px, 1.4vh, 16px); }
+.field label    { font-size: clamp(11px, 1.2vh, 13px); }
+.field input    { padding: clamp(8px, 1.1vh, 11px) 14px; font-size: clamp(12px, 1.3vh, 14px); }
+
+.btn-primary    { padding: clamp(10px, 1.3vh, 13px); font-size: clamp(13px, 1.4vh, 15px); margin-bottom: clamp(10px, 1.4vh, 16px); }
+.btn-social     { padding: clamp(8px, 1vh, 10px) 12px; font-size: clamp(12px, 1.3vh, 14px); }
+
+.logo           { margin-bottom: clamp(16px, 2.5vh, 36px); }
+.alt-link       { font-size: clamp(11px, 1.2vh, 13.5px); }
+.forgot         { font-size: clamp(11px, 1.2vh, 13px); }
+.footer-links   { font-size: clamp(10px, 1.1vh, 12px); margin-top: clamp(8px, 1.2vh, 16px); }
+.divider-line   { margin: clamp(8px, 1.2vh, 16px) 0; font-size: clamp(10px, 1.1vh, 12px); }
+.social-row     { margin-bottom: clamp(10px, 1.4vh, 20px); }
+.checkbox-row   { margin-bottom: clamp(12px, 1.8vh, 22px); }
+
+.right-content  { padding: clamp(20px, 3vw, 40px); gap: clamp(10px, 1.5vh, 16px); }
+.testimonial-card { padding: clamp(14px, 2vh, 22px) clamp(14px, 2vw, 22px); }
+.stars          { font-size: clamp(14px, 1.8vh, 18px); margin-bottom: clamp(8px, 1vh, 12px); }
+.testimonial-text { font-size: clamp(11px, 1.3vh, 13.5px); margin-bottom: clamp(10px, 1.2vh, 14px); }
+.author-name    { font-size: clamp(12px, 1.3vh, 14px); }
+.author-title   { font-size: clamp(10px, 1.1vh, 12px); }
+.stat-value     { font-size: clamp(16px, 2vh, 20px); }
+.stat-label     { font-size: clamp(9px, 1vh, 11px); }
+.live-badge     { font-size: clamp(10px, 1.1vh, 12px); }
+.stat-card      { padding: clamp(10px, 1.3vh, 14px) clamp(14px, 1.8vw, 22px); }
+
+/* ── Backdrop blur (Tailwind backdrop-blur needs PostCSS plugin in some setups) ── */
+.glass {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.glass-dark {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ── Gradient overlay ── */
+.right-overlay {
+  background: linear-gradient(135deg, rgba(0,0,0,0.60) 0%, rgba(0,0,0,0.25) 100%);
+}
+
+/* ── Avatar gradient ── */
+.avatar-gradient {
+  background: linear-gradient(135deg, #4ade80, #1a3d2b);
+}
+
+/* ── Divider pseudo-elements — Tailwind can't do ::before/::after content ── */
+.divider-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #aaa;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.divider-line::before,
+.divider-line::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #ebebeb;
+}
+
+/* ── Input focus ring override ── */
+.auth-input:focus {
+  border-color: #1a3d2b !important;
+  background: #fff !important;
+  outline: none;
+}
+
+/* ── Pulse animation for live dot ── */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.5); }
+  50%       { opacity: 0.8; box-shadow: 0 0 0 5px rgba(74, 222, 128, 0); }
+}
+.live-dot {
+  animation: pulse-dot 1.5s infinite;
+}
+
+/* ── Playfair brand name ── */
+.brand-name {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 2px;
+}
+
+/* ── Mobile: stack layout, right panel becomes top banner ── */
+@media (max-width: 640px) {
+  .auth-root    { flex-direction: column; }
+  .left-panel   { width: 100% !important; flex: 1; overflow-y: auto; justify-content: flex-start; padding: 24px; }
+  .right-panel  { width: 100% !important; height: 180px; flex-shrink: 0; order: -1; }
+  .right-content { padding: 16px 20px; }
+  .testimonial-text { display: none; }
+  .field-row    { flex-direction: column; gap: 0; }
+  .right-center { padding: 20px; }
+}
+
+/* ── Tablet ── */
+@media (min-width: 641px) and (max-width: 900px) {
+  .left-panel { width: 52% !important; }
+}
