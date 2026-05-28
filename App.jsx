@@ -1,5 +1,5 @@
-import DineflowAuth from "./dineflow-auth";
-import DineFlowDashboard from "./dashboard";
+import DineflowAuth from "./components/dineflow-auth";
+import DineFlowDashboard from "./components/dashboard";
 import { Route, Routes } from "react-router-dom";
 
 const App = () => {
