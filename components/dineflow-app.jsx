@@ -628,8 +628,12 @@ function AdminShell({
   );
 }
 
-function Card({ children, className = "" }) {
-  return <section className={`card ${className}`}>{children}</section>;
+function Card({ children, className = "", ...props }) {
+  return (
+    <section className={`card ${className}`} {...props}>
+      {children}
+    </section>
+  );
 }
 
 function StatCard({ stat }) {
