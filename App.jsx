@@ -1,14 +1,7 @@
-import DineflowAuth from "./components/dineflow-auth";
-import DineFlowDashboard from "./components/dashboard";
-import { Route, Routes } from "react-router-dom";
+import DineFlowApp from "./components/dineflow-app";
 
 const App = () => {
-  return (
-    <Routes>
-      <Route path="/" element={<DineflowAuth />} />
-      <Route path="/dashboard" element={<DineFlowDashboard />} />
-    </Routes>
-  );
+  return <DineFlowApp />;
 };
 
 export default App;
