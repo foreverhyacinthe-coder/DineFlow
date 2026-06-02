@@ -7,8 +7,8 @@ Restaurant management prototype with a React frontend and Express API.
 ```
 DINEFLOW/
 ├── Backend/
-│   ├── data/dineflow-data.js    # Shared seed data for the API
-│   └── server.js
+│   ├── data/dineflow-data.js    # Shared seed data
+│   └── src/                     # routes → controllers → services → models
 └── Frontend/
     └── src/
         ├── api/                   # API client & hooks
