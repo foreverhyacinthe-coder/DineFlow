@@ -1,6 +1,6 @@
 import { createApp } from "./app.js";
 import { config } from "./config/index.js";
-import { initializeStore } from "./models/store.js";
+import { initializeStore } from "./data/database.js";
 
 async function start() {
   await initializeStore();
