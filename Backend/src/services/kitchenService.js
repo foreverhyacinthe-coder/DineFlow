@@ -1,5 +1,8 @@
 import { ApiError } from "../utils/ApiError.js";
-import { getKitchenBoard, setKitchenBoard } from "../models/store.js";
+import {
+  getKitchenBoard,
+  setKitchenBoard,
+} from "../repositories/kitchenRepository.js";
 
 export function listKitchenBoard() {
   return getKitchenBoard();
