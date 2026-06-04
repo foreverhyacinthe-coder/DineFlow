@@ -6,7 +6,7 @@ import {
   findMenuById,
   getAllMenu,
   updateMenuItem,
-} from "../models/store.js";
+} from "../repositories/menuRepository.js";
 
 export function listMenu() {
   return getAllMenu();
