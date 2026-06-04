@@ -7,7 +7,9 @@ import {
   reservations,
   staff,
 } from "../data/seed.js";
-import { getAllMenu, getAllOrders, getKitchenBoard } from "../models/store.js";
+import { getKitchenBoard } from "../repositories/kitchenRepository.js";
+import { getAllMenu } from "../repositories/menuRepository.js";
+import { getAllOrders } from "../repositories/orderRepository.js";
 
 export function getOverview() {
   const orders = getAllOrders();
