@@ -1,18 +1,11 @@
 export const images = {
-  burger:
-    "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=1200&q=80",
-  chicken:
-    "https://images.unsplash.com/photo-1598103442097-8b74394b95c3?auto=format&fit=crop&w=1200&q=80",
-  restaurant:
-    "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=80",
-  diningRoom:
-    "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1400&q=80",
-  lounge:
-    "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1200&q=80",
-  kitchen:
-    "https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=1200&q=80",
-  map:
-    "https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=900&q=80",
+  burger: "/dineflow-images/hero-burger.jpg",
+  chicken: "/dineflow-images/hero-chicken.jpg",
+  restaurant: "/dineflow-images/restaurant-dining-room.jpg",
+  diningRoom: "/dineflow-images/restaurant-dining-room.jpg",
+  lounge: "/dineflow-images/bar-lounge.jpg",
+  kitchen: "/dineflow-images/professional-kitchen.jpg",
+  map: "/dineflow-images/restaurant-map.jpg",
 };
 
 export const overview = {
@@ -97,8 +90,7 @@ export const menuItems = [
     status: "In Stock",
     description:
       "Aged wagyu beef, black truffle aioli, aged cheddar, and brioche.",
-    image:
-      "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=80",
+    image: "/dineflow-images/truffle-burger.jpg",
   },
   {
     id: "quinoa-bowl",
@@ -113,8 +105,7 @@ export const menuItems = [
     status: "In Stock",
     description:
       "Tri-color quinoa, roasted chickpeas, avocado, greens, and citrus tahini.",
-    image:
-      "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=80",
+    image: "/dineflow-images/quinoa-bowl.jpg",
   },
   {
     id: "garlic-crab",
@@ -128,8 +119,7 @@ export const menuItems = [
     status: "Out of Stock",
     description:
       "Wild-caught Alaskan king crab legs with smoked garlic butter.",
-    image:
-      "https://images.unsplash.com/photo-1559737558-2f5a35f4523b?auto=format&fit=crop&w=900&q=80",
+    image: "/dineflow-images/king-crab.jpg",
   },
   {
     id: "miso-salmon",
@@ -143,8 +133,7 @@ export const menuItems = [
     rating: 4.8,
     status: "In Stock",
     description: "Atlantic salmon, sweet miso glaze, asparagus, and sesame.",
-    image:
-      "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=900&q=80",
+    image: "/dineflow-images/miso-salmon.jpg",
   },
   {
     id: "margherita",
@@ -158,8 +147,7 @@ export const menuItems = [
     status: "In Stock",
     description:
       "San Marzano tomatoes, buffalo mozzarella, basil, and olive oil.",
-    image:
-      "https://images.unsplash.com/photo-1604382355076-af4b0eb60143?auto=format&fit=crop&w=900&q=80",
+    image: "/dineflow-images/margherita-pizza.jpg",
   },
   {
     id: "ribeye",
@@ -172,8 +160,7 @@ export const menuItems = [
     rating: 4.9,
     status: "In Stock",
     description: "Charred ribeye, pepper jus, whipped potatoes, and herbs.",
-    image:
-      "https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=900&q=80",
+    image: "/dineflow-images/ribeye-steak.jpg",
   },
   {
     id: "gnocchi",
@@ -187,8 +174,7 @@ export const menuItems = [
     status: "In Stock",
     description:
       "Handmade potato gnocchi, clarified butter, pecorino, and shaved truffle.",
-    image:
-      "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=900&q=80",
+    image: "/dineflow-images/truffle-gnocchi.jpg",
   },
   {
     id: "lava-cake",
@@ -202,8 +188,7 @@ export const menuItems = [
     status: "In Stock",
     description:
       "Molten Uji matcha center, white chocolate soil, and berry coulis.",
-    image:
-      "https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=900&q=80",
+    image: "/dineflow-images/matcha-fondant.jpg",
   },
 ];
 
@@ -437,8 +422,7 @@ export const publicMenu = {
       name: "Sushi Zen Omakase",
       meta: "Kyoto-style tasting experience",
       rating: "4.8",
-      image:
-        "https://images.unsplash.com/photo-1579027989536-b7b1f875659b?auto=format&fit=crop&w=900&q=80",
+      image: "/dineflow-images/sushi-restaurant.jpg",
     },
     {
       name: "Emerald Lounge",
@@ -450,15 +434,13 @@ export const publicMenu = {
       name: "Botanica Kitchen",
       meta: "Organic & Vegan - 0.8 mi",
       rating: "4.6",
-      image:
-        "https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&w=900&q=80",
+      image: "/dineflow-images/vegan-restaurant.jpg",
     },
     {
       name: "Terra Grill",
       meta: "Mediterranean - 1.2 mi",
       rating: "4.9",
-      image:
-        "https://images.unsplash.com/photo-1592861956120-e524fc739696?auto=format&fit=crop&w=900&q=80",
+      image: "/dineflow-images/mediterranean-grill.jpg",
     },
   ],
 };
