@@ -1,6 +1,6 @@
 import { ApiError } from "../utils/ApiError.js";
 import { Order } from "../models/Order.js";
-import { addOrder, getAllOrders } from "../models/store.js";
+import { addOrder, getAllOrders } from "../repositories/orderRepository.js";
 
 export function listOrders() {
   return getAllOrders();
