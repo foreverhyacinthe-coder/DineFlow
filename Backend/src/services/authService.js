@@ -7,7 +7,7 @@ import {
   addUser,
   findUserByEmail,
   findUserById,
-} from "../models/store.js";
+} from "../repositories/userRepository.js";
 
 function createToken(user) {
   return jwt.sign(
