@@ -359,7 +359,13 @@ export const analytics = {
     ["Roasted Branzino", 15],
   ],
   loyalty: [
-    ["Alexander Mitchell", "Premium Member", "$1,240.00", "24 Visits", "High Value"],
+    [
+      "Alexander Mitchell",
+      "Premium Member",
+      "$1,240.00",
+      "24 Visits",
+      "High Value",
+    ],
     ["Sarah Chen", "Regular Member", "$890.50", "18 Visits", "At Risk"],
     ["Jordan Lee", "New Member", "$320.00", "4 Visits", "Rising Star"],
   ],
@@ -373,7 +379,13 @@ export const staff = {
     ["Pending requests", "03", "Urgent", "rose"],
   ],
   roster: [
-    ["Marcus Villalobos", "Executive Chef", "On Duty", "Active: Order #204", 98],
+    [
+      "Marcus Villalobos",
+      "Executive Chef",
+      "On Duty",
+      "Active: Order #204",
+      98,
+    ],
     ["Elena Smith", "Sous Chef", "Off Duty", "Checked out 4h ago", 82],
     ["Julian Chen", "Waitstaff Lead", "On Duty", "Table 12: Checkout", 95],
   ],
