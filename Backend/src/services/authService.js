@@ -27,7 +27,9 @@ export function buildSession(user) {
 export async function registerUser(payload) {
   const restaurant = String(payload.restaurant || "").trim();
   const name = String(payload.name || "").trim();
-  const email = String(payload.email || "").trim().toLowerCase();
+  const email = String(payload.email || "")
+    .trim()
+    .toLowerCase();
   const password = String(payload.password || "");
   const confirmPassword = String(payload.confirmPassword || "");
 
@@ -65,7 +67,9 @@ export async function registerUser(payload) {
 }
 
 export async function loginUser(email, password) {
-  const normalizedEmail = String(email || "").trim().toLowerCase();
+  const normalizedEmail = String(email || "")
+    .trim()
+    .toLowerCase();
   const plainPassword = String(password || "");
 
   if (!normalizedEmail || !plainPassword) {
@@ -78,7 +82,10 @@ export async function loginUser(email, password) {
     throw new ApiError(401, "Invalid email or password.");
   }
 
-  const passwordMatches = await bcrypt.compare(plainPassword, user.passwordHash);
+  const passwordMatches = await bcrypt.compare(
+    plainPassword,
+    user.passwordHash,
+  );
 
   if (!passwordMatches) {
     throw new ApiError(401, "Invalid email or password.");
