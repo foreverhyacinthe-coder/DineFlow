@@ -3,10 +3,11 @@ import { corsMiddleware } from "./middleware/cors.js";
 import { errorHandler } from "./middleware/errorHandler.js";
 import apiRoutes from "./routes/index.js";
 import { ApiError } from "./utils/ApiError.js";
-
+import morgan from 'morgan'
 export function createApp() {
   const app = express();
 
+  app.use(morgan('dev'))
   app.use(corsMiddleware);
   app.use(express.json());
 
